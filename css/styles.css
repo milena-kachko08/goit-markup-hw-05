@@ -486,8 +486,8 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     background-color: #31d0aa;
 }
 
+
 .subscribe-text {
-    gap: 16px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -499,12 +499,12 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 .subscribe-box {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: baseline;
 }
 
 .email-input {
-    background-color: #2e2f42;
+    position: relative;
+    background-color: transparent;
     border: 1px solid #fff;
     border-radius: 4px;
     width: 264px;
@@ -526,6 +526,10 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 }
 
 .subscribe-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
     border-radius: 4px;
     padding: 8px 24px;
     min-width: 165px;
@@ -539,7 +543,11 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     color: #fff;
     cursor: pointer;
     border: none;
-    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-btn:hover {
+    background: #404bbf;
 }
 
 .modal-overlay {
