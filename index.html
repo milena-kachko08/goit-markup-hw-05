@@ -523,7 +523,48 @@
     <form class="modal-form">
       <div class="modal-container-block">
          <label class="modal-form-label" for="user-text">Name</label>
+         <div  class="modal-form-input-cont">
+          <input class="modal-form-input" required id="user-text" title="name" pattern="[a-zA-Zа-яА-ЯіІїЇєЄ']+"
+              name="user-text" type="text"/>
+          <svg width="24" height="24" class="modal-form-icon">
+            <use href="./images/icons.svg#icon-person"></use>
+          </svg>
+        </div>
       </div>
+      <div class="modal-container-block">
+          <label class="modal-form-label" for="user-tel">Phone</label>
+          <div class="modal-form-input-cont">
+            <input class="modal-form-input" required id="user-tel" title="xxx-xxx-xx-xx" name="user-tel"
+              type="tel">
+            <svg width="24" height="24" class="modal-form-icon">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+        </div>
+      </div>
+      <div class="modal-container-block">
+          <label class="modal-form-label" for="user-email">Email</label>
+          <div class="modal-form-input-cont">
+            <input class="modal-form-input" required id="user-email" title="test@gmail.com" name="user-email"
+             type="email">
+            <svg width="24" height="24" class="modal-form-icon">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="cont-user-text">
+          <label class="modal-form-label" for="user-coment">Comment</label>
+          <textarea name="user-coment" placeholder="Enter text" id="user-coment" class="user-coment"></textarea>
+        </div>
+        <div class="modal-form-con-chekbox">
+          <input type="checkbox" class="checkbox visually-hidden" id="user-checkbox">
+          <label class="label-checkbox" for="user-checkbox"><span class="custom-checkbox">
+              <svg width="10" height="10">
+                <use href="./images/icons.svg#cheked"></use>
+              </svg>
+            </span>I accept the terms and conditions of the <a href="">Privacy
+              Policy</a></label>
+        </div>
+        <button type="submit">Send</button>
     </form>
   </div>
 </div>
