@@ -537,6 +537,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     background: #4d5ae5;
     font-weight: 500;
     font-size: 16px;
+    font-family: "Roboto", sans-serif;
     line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: center;
@@ -551,3 +552,209 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 }
 
 /*region backdrop*/
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    z-index: 9999;
+    /*visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: visibility, opacity, pointer-events;*/
+
+}
+
+.modal-backdrop .is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    width: 408px;
+    min-height: 584px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50% , -50%);
+    padding: 72px 24px 24px 24px;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background: #fcfcfc;
+
+}
+
+.close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 100%;
+    background-color: #e7e9fc;
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.1);
+    border: 0;
+    line-height: 0;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:hover ,
+.close-btn:focus {
+    background-color: #404bbf;
+}
+
+.close-btn-icon {
+   fill: #2e2f42;
+}
+
+.modal-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-bottom: 16px;
+}
+
+.modal-container-block {
+    margin-bottom: 16px;
+
+}
+
+.modal-form-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.modal-form-input-cont {
+    position: relative;
+}
+
+.modal-form-input {
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    outline: transparent;
+    padding-left: 38px;
+}
+
+.modal-form-input:focus {
+    border: 1px solid #4d5ae5;
+}
+
+.modal-form-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    fill: transparent;
+    stroke: #1e1823;
+    transform: translateY(-50%);
+    fill: #2e2f42;;
+}
+
+.modal-form-input:focus+.modal-form-icon {
+    stroke: #4d5ae5;
+    fill: #4d5ae5;
+}
+
+.cont-user-text {
+    margin-bottom: 17px;
+}
+
+.user-comment {
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 360px;
+    min-height: 120px;
+}
+
+.user-comment:focus {
+    border: 1px solid #4d5ae5;
+    outline: transparent;
+}
+
+.user-comment::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    padding-left: 16px;
+    padding-top: 8px;
+}
+
+.label-checkbox {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.label-checkbox a {
+    cursor: pointer;
+    line-height: 1.33333;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #4d5ae5;
+}
+
+.custom-checkbox {
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    margin-right: 8px;
+}
+
+.checkbox:checked + .label-checkbox .custom-checkbox {
+    background-color: #4d5ae5;
+    border: transparent;
+    fill: #f4f4fd;
+}
+
+.submit-btn {
+    display: block;
+    border-radius: 4px;
+    padding: 16px 32px;
+    min-width: 169px;
+    height: 56px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background: #4d5ae5;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+
+.submit-btn:hover,
+.submit-btn.focus {
+    background-color: #404bbf;
+}
+
+/* endregion backdrop */
