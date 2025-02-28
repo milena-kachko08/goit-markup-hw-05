@@ -487,19 +487,21 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 }
 
 
-.subscribe-text {
+.email-form-footer {
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.subscribe-label {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #fff;
     margin-left: 80px;
-}
-
-.subscribe-box {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
+    margin-bottom: 16px;
 }
 
 .email-input {
@@ -511,7 +513,6 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     padding-left: 16px;
-    margin-top: 16px;
     margin-left: 80px;
     margin-right: 28px;
 
@@ -564,8 +565,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     /*visibility: hidden;
     opacity: 0;
     pointer-events: none;
-    transform: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: visibility, opacity, pointer-events;*/
+    transform: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
 
 }
 
@@ -586,23 +586,28 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background: #fcfcfc;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .close-btn {
+    display: flex ;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 24px;
     right: 24px;
     width: 24px;
     height: 24px;
     padding: 0;
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     stroke-width: 1px;
     stroke: rgba(0, 0, 0, 0.1);
-    border: 0;
     line-height: 0;
-    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 
 .close-btn:hover ,
@@ -612,6 +617,12 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 
 .close-btn-icon {
    fill: #2e2f42;
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn-icon:hover ,
+.close-btn-icon:focus {
+    fill: #ffffff;
 }
 
 .modal-text {
@@ -625,18 +636,18 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 }
 
 .modal-container-block {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 
 }
 
 .modal-form-label {
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .modal-form-input-cont {
@@ -650,6 +661,8 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     height: 40px;
     outline: transparent;
     padding-left: 38px;
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus {
@@ -663,7 +676,8 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     fill: transparent;
     stroke: #1e1823;
     transform: translateY(-50%);
-    fill: #2e2f42;;
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus+.modal-form-icon {
@@ -672,7 +686,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 }
 
 .cont-user-text {
-    margin-bottom: 17px;
+    margin-bottom: 16px;
 }
 
 .user-comment {
@@ -680,6 +694,11 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     border-radius: 4px;
     width: 360px;
     min-height: 120px;
+    padding: 8px 16px;
+    background-color: transparent;
+    outline: transparent;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .user-comment:focus {
@@ -690,11 +709,13 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 .user-comment::placeholder {
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
-    padding-left: 16px;
-    padding-top: 8px;
+}
+
+.modal-form-con-chekbox {
+    margin-bottom: 24px;
 }
 
 .label-checkbox {
@@ -705,7 +726,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     color: #8e8f99;
 }
 
-.label-checkbox a {
+.privacy-link {
     cursor: pointer;
     line-height: 1.33333;
     text-decoration: underline;
@@ -717,13 +738,14 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     background-color: transparent;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     fill: transparent;
     margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked + .label-checkbox .custom-checkbox {
@@ -749,7 +771,8 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     color: #fff;
     font-family: "Roboto", sans-serif;
     margin: 0 auto;
-    margin-top: 24px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .submit-btn:hover,
