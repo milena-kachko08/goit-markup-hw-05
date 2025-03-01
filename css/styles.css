@@ -511,7 +511,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     border-radius: 4px;
     width: 264px;
     font-size: 12px;
-    line-height: 2px;
+    line-height: 2;
     letter-spacing: 0.04em;
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
